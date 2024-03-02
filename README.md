@@ -1,2 +1,1 @@
-# DreamWish
-Keep track of your wishes effortlessly. Organize, prioritize, and make your dreams a reality with just a few taps.
+note because this is in a monorepo had to remove react, react-dom, and react-native-web deps and change metro.config.js a bit.
