@@ -8,7 +8,7 @@ export const user = pgTable('user', {
   bio: text('bio'),
   profile_pic: text('profile_pic'),
   cover_pic: text('cover_pic'),
-  created_at: timestamp('created_at'),
+  created_at: timestamp('created_at').defaultNow(),
   updated_at: timestamp('updated_at'),
 })
 
@@ -20,7 +20,7 @@ export const wishList = pgTable('wish_list', {
   name: text('name').notNull(),
   description: text('description'),
   cover_pic: text('cover_pic'),
-  created_at: timestamp('created_at'),
+  created_at: timestamp('created_at').defaultNow(),
   updated_at: timestamp('updated_at'),
 })
 
@@ -34,6 +34,6 @@ export const wish = pgTable('wish', {
   cover_pic: text('cover_pic'),
   price: text('price'),
   link: text('link'),
-  created_at: timestamp('created_at'),
+  created_at: timestamp('created_at').defaultNow(),
   updated_at: timestamp('updated_at'),
 })

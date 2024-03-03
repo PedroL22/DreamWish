@@ -10,8 +10,8 @@
     "ios": "expo start --ios",
     "web": "expo start --web",
     "test": "jest --watchAll",
-    "generate": "drizzle-kit generate:pg",
-    "push": "drizzle-kit push:pg --config ./drizzle.config.ts"
+    "db:generate": "drizzle-kit generate:pg",
+    "db:push": "drizzle-kit push:pg --config ./drizzle.config.ts"
   },
   "jest": {
     "preset": "jest-expo"
