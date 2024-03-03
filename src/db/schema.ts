@@ -16,7 +16,7 @@ export const wishList = pgTable('wish_list', {
   id: uuid('id').primaryKey(),
   author_id: uuid('author_id')
     .notNull()
-    .references(() => user.id),
+    .references(() => user.id, { onDelete: 'cascade' }),
   name: text('name').notNull(),
   description: text('description'),
   cover_pic: text('cover_pic'),
@@ -28,7 +28,7 @@ export const wish = pgTable('wish', {
   id: uuid('id').primaryKey(),
   wish_list_id: uuid('wish_list_id')
     .notNull()
-    .references(() => wishList.id),
+    .references(() => wishList.id, { onDelete: 'cascade' }),
   name: text('name').notNull(),
   description: text('description'),
   cover_pic: text('cover_pic'),
