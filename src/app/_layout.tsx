@@ -6,11 +6,11 @@ import {
 import { SplashScreen, Stack } from 'expo-router'
 import { useColorScheme } from 'react-native'
 import { TamaguiProvider } from 'tamagui'
+import { useFonts } from 'expo-font'
+import { useEffect } from 'react'
 
 import '../../tamagui-web.css'
 
-import { useFonts } from 'expo-font'
-import { useEffect } from 'react'
 import { config } from '../../tamagui.config'
 
 export {
