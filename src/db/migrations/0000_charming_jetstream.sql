@@ -1,14 +1,14 @@
 CREATE TABLE IF NOT EXISTS "user" (
 	"id" uuid PRIMARY KEY NOT NULL,
-	"name" text NOT NULL,
+	"nickname" text NOT NULL,
 	"email" text NOT NULL,
 	"password" text NOT NULL,
 	"bio" text,
 	"profile_pic" text,
 	"cover_pic" text,
-	"created_at" timestamp,
+	"created_at" timestamp DEFAULT now(),
 	"updated_at" timestamp,
-	CONSTRAINT "user_name_unique" UNIQUE("name"),
+	CONSTRAINT "user_nickname_unique" UNIQUE("nickname"),
 	CONSTRAINT "user_email_unique" UNIQUE("email")
 );
 --> statement-breakpoint
@@ -20,7 +20,7 @@ CREATE TABLE IF NOT EXISTS "wish" (
 	"cover_pic" text,
 	"price" text,
 	"link" text,
-	"created_at" timestamp,
+	"created_at" timestamp DEFAULT now(),
 	"updated_at" timestamp
 );
 --> statement-breakpoint
@@ -30,7 +30,7 @@ CREATE TABLE IF NOT EXISTS "wish_list" (
 	"name" text NOT NULL,
 	"description" text,
 	"cover_pic" text,
-	"created_at" timestamp,
+	"created_at" timestamp DEFAULT now(),
 	"updated_at" timestamp
 );
 --> statement-breakpoint

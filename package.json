@@ -11,6 +11,7 @@
     "web": "expo start --web",
     "test": "jest --watchAll",
     "db:generate": "drizzle-kit generate:pg",
+    "db:migrate": "ts-node --script-mode src/db/migrate.ts",
     "db:push": "drizzle-kit push:pg --config ./drizzle.config.ts"
   },
   "jest": {
@@ -47,7 +48,9 @@
   "devDependencies": {
     "@babel/core": "^7.23.3",
     "@types/react": "~18.2.14",
-    "drizzle-kit": "^0.20.14"
+    "dotenv": "^16.4.5",
+    "drizzle-kit": "^0.20.14",
+    "ts-node": "^10.9.2"
   },
   "private": true,
   "packageManager": "yarn@4.0.2"

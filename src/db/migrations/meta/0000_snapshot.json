@@ -1,5 +1,5 @@
 {
-  "id": "5a955dfd-4d52-453a-aa7f-f8e436b3107f",
+  "id": "21cb0bc5-4da5-42b2-ac54-22bbc0c26b02",
   "prevId": "00000000-0000-0000-0000-000000000000",
   "version": "5",
   "dialect": "pg",
@@ -14,8 +14,8 @@
           "primaryKey": true,
           "notNull": true
         },
-        "name": {
-          "name": "name",
+        "nickname": {
+          "name": "nickname",
           "type": "text",
           "primaryKey": false,
           "notNull": true
@@ -54,7 +54,8 @@
           "name": "created_at",
           "type": "timestamp",
           "primaryKey": false,
-          "notNull": false
+          "notNull": false,
+          "default": "now()"
         },
         "updated_at": {
           "name": "updated_at",
@@ -67,11 +68,11 @@
       "foreignKeys": {},
       "compositePrimaryKeys": {},
       "uniqueConstraints": {
-        "user_name_unique": {
-          "name": "user_name_unique",
+        "user_nickname_unique": {
+          "name": "user_nickname_unique",
           "nullsNotDistinct": false,
           "columns": [
-            "name"
+            "nickname"
           ]
         },
         "user_email_unique": {
@@ -133,7 +134,8 @@
           "name": "created_at",
           "type": "timestamp",
           "primaryKey": false,
-          "notNull": false
+          "notNull": false,
+          "default": "now()"
         },
         "updated_at": {
           "name": "updated_at",
@@ -199,7 +201,8 @@
           "name": "created_at",
           "type": "timestamp",
           "primaryKey": false,
-          "notNull": false
+          "notNull": false,
+          "default": "now()"
         },
         "updated_at": {
           "name": "updated_at",
