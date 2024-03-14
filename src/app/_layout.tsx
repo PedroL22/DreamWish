@@ -1,13 +1,7 @@
-import {
-  DarkTheme,
-  DefaultTheme,
-  ThemeProvider,
-} from '@react-navigation/native'
-import { SplashScreen, Stack } from 'expo-router'
-import { useColorScheme } from 'react-native'
-import { TamaguiProvider } from 'tamagui'
 import { useFonts } from 'expo-font'
+import { SplashScreen, Stack } from 'expo-router'
 import { useEffect } from 'react'
+import { TamaguiProvider } from 'tamagui'
 
 import '../../tamagui-web.css'
 
@@ -47,26 +41,19 @@ export default function RootLayout() {
 }
 
 function RootLayoutNav() {
-  const colorScheme = useColorScheme()
-
   return (
-    <TamaguiProvider
-      config={config}
-      defaultTheme={colorScheme as any}
-    >
-      <ThemeProvider value={colorScheme === 'dark' ? DarkTheme : DefaultTheme}>
-        <Stack>
-          <Stack.Screen
-            name='(tabs)'
-            options={{ headerShown: false }}
-          />
+    <TamaguiProvider config={config}>
+      <Stack>
+        <Stack.Screen
+          name='(tabs)'
+          options={{ headerShown: false }}
+        />
 
-          <Stack.Screen
-            name='modal'
-            options={{ presentation: 'modal' }}
-          />
-        </Stack>
-      </ThemeProvider>
+        <Stack.Screen
+          name='modal'
+          options={{ presentation: 'modal' }}
+        />
+      </Stack>
     </TamaguiProvider>
   )
 }
