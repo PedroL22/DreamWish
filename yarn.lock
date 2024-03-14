@@ -6654,7 +6654,7 @@ __metadata:
     expo-linking: "npm:~6.2.1"
     expo-router: "npm:~3.4.8"
     expo-splash-screen: "npm:~0.26.4"
-    expo-status-bar: "npm:~1.11.1"
+    expo-status-bar: "npm:^1.11.1"
     expo-system-ui: "npm:~2.9.3"
     expo-web-browser: "npm:~12.8.2"
     react: "npm:^18.2.0"
@@ -7160,7 +7160,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"expo-status-bar@npm:~1.11.1":
+"expo-status-bar@npm:^1.11.1":
   version: 1.11.1
   resolution: "expo-status-bar@npm:1.11.1"
   checksum: f2c9d51fd5211520d0a53df69310f1b0a1b40c935ded24a267ff23becaf0dfb19517440ab3b1ff8c4adda651e99dafef681c055a1efe397df68056667dde2512

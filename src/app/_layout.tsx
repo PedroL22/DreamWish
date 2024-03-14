@@ -1,12 +1,13 @@
 import { DefaultTheme, ThemeProvider } from '@react-navigation/native'
 import { useFonts } from 'expo-font'
 import { SplashScreen, Stack } from 'expo-router'
+import { StatusBar } from 'expo-status-bar'
 import { useEffect } from 'react'
-import { useColorScheme } from 'react-native'
-import { TamaguiProvider } from 'tamagui'
+import { TamaguiProvider, View } from 'tamagui'
 
 import '../../tamagui-web.css'
 
+import { useSafeAreaInsets } from 'react-native-safe-area-context'
 import { config } from '../../tamagui.config'
 
 export {
@@ -43,23 +44,22 @@ export default function RootLayout() {
 }
 
 function RootLayoutNav() {
-  const colorScheme = useColorScheme()
+  const insets = useSafeAreaInsets()
 
   return (
     <TamaguiProvider
       config={config}
-      defaultTheme={'light'}
+      defaultTheme='light'
     >
       <ThemeProvider value={DefaultTheme}>
+        <View style={{ paddingTop: insets.top }}>
+          <StatusBar style='dark' />
+        </View>
+
         <Stack>
           <Stack.Screen
             name='(tabs)'
             options={{ headerShown: false }}
-          />
-
-          <Stack.Screen
-            name='modal'
-            options={{ presentation: 'modal' }}
           />
         </Stack>
       </ThemeProvider>
