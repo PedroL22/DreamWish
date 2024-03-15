@@ -1,13 +1,12 @@
 import { DefaultTheme, ThemeProvider } from '@react-navigation/native'
 import { useFonts } from 'expo-font'
 import { SplashScreen, Stack } from 'expo-router'
-import { StatusBar } from 'expo-status-bar'
 import { useEffect } from 'react'
-import { TamaguiProvider, View } from 'tamagui'
 
-import '../../tamagui-web.css'
-
+import { StatusBar } from 'expo-status-bar'
 import { useSafeAreaInsets } from 'react-native-safe-area-context'
+import { TamaguiProvider, View } from 'tamagui'
+import '../../tamagui-web.css'
 import { config } from '../../tamagui.config'
 
 export {
@@ -53,13 +52,18 @@ function RootLayoutNav() {
     >
       <ThemeProvider value={DefaultTheme}>
         <View style={{ paddingTop: insets.top }}>
-          <StatusBar style='dark' />
+          <StatusBar />
         </View>
 
         <Stack>
           <Stack.Screen
             name='(tabs)'
-            options={{ headerShown: false }}
+            options={{
+              headerShown: false,
+              statusBarTranslucent: true,
+              statusBarStyle: 'dark',
+              navigationBarColor: '#ffffff00',
+            }}
           />
         </Stack>
       </ThemeProvider>

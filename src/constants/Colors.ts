@@ -1,11 +1,11 @@
-const tintColorLight = '#2f95dc'
+const primaryColor = '#E7609E'
+const secondaryColor = '#F4B7D3'
 
-export default {
+export const Colors = {
   light: {
+    primaryColor,
+    secondaryColor,
     text: '#000',
     background: '#fff',
-    tint: tintColorLight,
-    tabIconDefault: '#ccc',
-    tabIconSelected: tintColorLight,
   },
 }

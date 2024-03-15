@@ -1,11 +1,14 @@
 import { Tabs } from 'expo-router'
-import { Text } from 'tamagui'
+
+import FontAwesome from '@expo/vector-icons/FontAwesome'
+
+import { Colors } from '~/constants/Colors'
 
 export default function TabLayout() {
   return (
     <Tabs
       screenOptions={{
-        tabBarActiveTintColor: 'red',
+        tabBarActiveTintColor: Colors.light.primaryColor,
         headerShown: false,
       }}
     >
@@ -13,7 +16,13 @@ export default function TabLayout() {
         name='index'
         options={{
           title: 'Home',
-          tabBarIcon: ({ color }) => <Text>Hello!</Text>,
+          tabBarIcon: ({ color }) => (
+            <FontAwesome
+              size={28}
+              name='home'
+              color={color}
+            />
+          ),
         }}
       />
 
@@ -21,7 +30,27 @@ export default function TabLayout() {
         name='create'
         options={{
           title: 'Create',
-          tabBarIcon: ({ color }) => <Text>Create!</Text>,
+          tabBarIcon: ({ color }) => (
+            <FontAwesome
+              size={28}
+              name='plus'
+              color={color}
+            />
+          ),
+        }}
+      />
+
+      <Tabs.Screen
+        name='profile'
+        options={{
+          title: 'Profile',
+          tabBarIcon: ({ color }) => (
+            <FontAwesome
+              size={28}
+              name='user'
+              color={color}
+            />
+          ),
         }}
       />
     </Tabs>
