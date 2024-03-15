@@ -1,4 +1,5 @@
-import { Text, View } from 'tamagui'
+import { View } from 'tamagui'
+import { Banner } from '~/components/home'
 
 export default function HomeScreen() {
   return (
@@ -6,7 +7,7 @@ export default function HomeScreen() {
       flex={1}
       alignItems='center'
     >
-      <Text fontSize={20}>Home</Text>
+      <Banner />
     </View>
   )
 }
