@@ -15,6 +15,7 @@ import {
 } from '@expo-google-fonts/poppins'
 import { config } from '@gluestack-ui/config'
 import { GluestackUIProvider, StatusBar, View } from '@gluestack-ui/themed'
+import { Colors } from '~/constants/Colors'
 
 export {
   // Catch any errors thrown by the Layout component.
@@ -65,7 +66,7 @@ function RootLayoutNav() {
         <View style={{ paddingTop: insets.top }}>
           <StatusBar
             animated={true}
-            backgroundColor='#61dafb'
+            backgroundColor={Colors.light.secondaryColor}
           />
         </View>
 
