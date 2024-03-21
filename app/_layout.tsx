@@ -3,6 +3,7 @@ import { useFonts } from 'expo-font'
 import { Stack } from 'expo-router'
 import * as SplashScreen from 'expo-splash-screen'
 import { useEffect } from 'react'
+import { useSafeAreaInsets } from 'react-native-safe-area-context'
 
 import {
   Poppins_100Thin,
@@ -12,6 +13,8 @@ import {
   Poppins_500Medium,
   Poppins_600SemiBold,
 } from '@expo-google-fonts/poppins'
+import { config } from '@gluestack-ui/config'
+import { GluestackUIProvider, StatusBar, View } from '@gluestack-ui/themed'
 
 export {
   // Catch any errors thrown by the Layout component.
@@ -54,14 +57,25 @@ export default function RootLayout() {
 }
 
 function RootLayoutNav() {
+  const insets = useSafeAreaInsets()
+
   return (
-    <ThemeProvider value={DefaultTheme}>
-      <Stack>
-        <Stack.Screen
-          name='(tabs)'
-          options={{ headerShown: false }}
-        />
-      </Stack>
-    </ThemeProvider>
+    <GluestackUIProvider config={config}>
+      <ThemeProvider value={DefaultTheme}>
+        <View style={{ paddingTop: insets.top }}>
+          <StatusBar
+            animated={true}
+            backgroundColor='#61dafb'
+          />
+        </View>
+
+        <Stack>
+          <Stack.Screen
+            name='(tabs)'
+            options={{ headerShown: false }}
+          />
+        </Stack>
+      </ThemeProvider>
+    </GluestackUIProvider>
   )
 }
