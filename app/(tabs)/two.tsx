@@ -1,28 +1,24 @@
+import { Text, View } from '@gluestack-ui/themed'
 import React from 'react'
-import { StyleSheet, Text, View } from 'react-native'
 
 export default function TabTwoScreen() {
   return (
-    <View style={styles.container}>
-      <Text style={styles.title}>Tab Two</Text>
+    <View
+      sx={{
+        flex: 1,
+        alignItems: 'center',
+        justifyContent: 'center',
+      }}
+    >
+      <Text
+        sx={{
+          fontSize: 20,
+          fontWeight: '600',
+          fontFamily: 'Poppins_600SemiBold',
+        }}
+      >
+        Tab Two
+      </Text>
     </View>
   )
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-  title: {
-    fontSize: 20,
-    fontWeight: '600',
-    fontFamily: 'Poppins_600SemiBold',
-  },
-  separator: {
-    marginVertical: 30,
-    height: 1,
-    width: '80%',
-  },
-})

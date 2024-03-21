@@ -1,45 +1,48 @@
+import { Text, View } from '@gluestack-ui/themed'
 import { Link, Stack } from 'expo-router'
-import { StyleSheet, Text, View } from 'react-native'
 
 export default function NotFoundScreen() {
   return (
     <>
       <Stack.Screen options={{ title: 'Oops!' }} />
 
-      <View style={styles.container}>
-        <Text style={styles.title}>This screen doesn't exist.</Text>
+      <View
+        sx={{
+          flex: 1,
+          alignItems: 'center',
+          justifyContent: 'center',
+          padding: 20,
+        }}
+      >
+        <Text
+          sx={{
+            fontSize: 20,
+            fontWeight: '600',
+            fontFamily: 'Poppins_600SemiBold',
+          }}
+        >
+          This screen doesn't exist.
+        </Text>
 
         <Link
           href='/'
-          style={styles.link}
+          style={{
+            marginTop: 15,
+            paddingVertical: 15,
+            fontFamily: 'Poppins_400Regular',
+          }}
         >
-          <Text style={styles.linkText}>Go to home screen!</Text>
+          <Text
+            sx={{
+              fontSize: 14,
+              fontFamily: 'Poppins_400Regular',
+              color: '#2e78b7',
+            }}
+          >
+            Go to home screen!
+          </Text>
         </Link>
       </View>
     </>
   )
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    alignItems: 'center',
-    justifyContent: 'center',
-    padding: 20,
-  },
-  title: {
-    fontSize: 20,
-    fontWeight: '600',
-    fontFamily: 'Poppins_600SemiBold',
-  },
-  link: {
-    marginTop: 15,
-    paddingVertical: 15,
-    fontFamily: 'Poppins_400Regular',
-  },
-  linkText: {
-    fontSize: 14,
-    fontFamily: 'Poppins_400Regular',
-    color: '#2e78b7',
-  },
-})
