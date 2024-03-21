@@ -5,10 +5,12 @@ import * as SplashScreen from 'expo-splash-screen'
 import { useEffect } from 'react'
 
 import {
+  Poppins_100Thin,
+  Poppins_200ExtraLight,
+  Poppins_300Light,
   Poppins_400Regular,
   Poppins_500Medium,
   Poppins_600SemiBold,
-  Poppins_700Bold,
 } from '@expo-google-fonts/poppins'
 
 export {
@@ -17,7 +19,6 @@ export {
 } from 'expo-router'
 
 export const unstable_settings = {
-  // Ensure that reloading on `/modal` keeps a back button present.
   initialRouteName: '(tabs)',
 }
 
@@ -26,10 +27,12 @@ SplashScreen.preventAutoHideAsync()
 
 export default function RootLayout() {
   const [fontsLoaded, fontsError] = useFonts({
+    Poppins_100Thin,
+    Poppins_200ExtraLight,
+    Poppins_300Light,
     Poppins_400Regular,
     Poppins_500Medium,
     Poppins_600SemiBold,
-    Poppins_700Bold,
   })
 
   // Expo Router uses Error Boundaries to catch errors in the navigation tree.

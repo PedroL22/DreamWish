@@ -17,7 +17,8 @@ const styles = StyleSheet.create({
   },
   title: {
     fontSize: 20,
-    fontWeight: 'bold',
+    fontWeight: '600',
+    fontFamily: 'Poppins_600SemiBold',
   },
   separator: {
     marginVertical: 30,

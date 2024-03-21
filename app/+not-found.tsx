@@ -29,14 +29,17 @@ const styles = StyleSheet.create({
   },
   title: {
     fontSize: 20,
-    fontWeight: 'bold',
+    fontWeight: '600',
+    fontFamily: 'Poppins_600SemiBold',
   },
   link: {
     marginTop: 15,
     paddingVertical: 15,
+    fontFamily: 'Poppins_400Regular',
   },
   linkText: {
     fontSize: 14,
+    fontFamily: 'Poppins_400Regular',
     color: '#2e78b7',
   },
 })
