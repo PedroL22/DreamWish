@@ -1,16 +1,16 @@
+import { type FC } from 'react'
+
 import { Image, View } from '@gluestack-ui/themed'
-import React from 'react'
+import DefaultBanner from '~/assets/images/banner-default.png'
 
-import BannerDefault from '~/assets/images/banner-default.png'
-
-export const Banner = () => {
+export const Banner: FC = () => {
   return (
     <View
       width='100%'
       flexDirection='row'
     >
       <Image
-        source={BannerDefault}
+        source={DefaultBanner}
         alt='default banner'
         flex={1}
       />

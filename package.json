@@ -19,6 +19,7 @@
     "@gluestack-ui/config": "^1.1.18",
     "@gluestack-ui/themed": "^1.1.17",
     "@react-navigation/native": "^6.0.2",
+    "@shopify/flash-list": "^1.6.4",
     "expo": "~50.0.14",
     "expo-font": "~11.10.3",
     "expo-linking": "~6.2.2",

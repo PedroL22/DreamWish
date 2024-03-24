@@ -1,10 +1,11 @@
-import { Image, Text, View } from '@gluestack-ui/themed'
+import { type FC } from 'react'
 
-import ProfilePicDefault from '~/assets/images/profile-pic-default.jpg'
+import { Image, Text, View } from '@gluestack-ui/themed'
+import DefaultProfilePic from '~/assets/images/profile-pic-default.jpg'
 
 import { fakeData } from '~/@fakeData'
 
-export const UserProfile = () => {
+export const UserProfile: FC = () => {
   const { user } = fakeData()
 
   return (
@@ -14,15 +15,21 @@ export const UserProfile = () => {
       gap='$3'
     >
       <Image
-        source={ProfilePicDefault}
+        source={DefaultProfilePic}
         alt='default profile picture'
-        borderRadius={256}
         width={64}
         height={64}
+        objectFit='cover'
+        borderRadius={256}
       />
 
       <View>
-        <Text fontFamily='Poppins_600SemiBold'>{user.name}</Text>
+        <Text
+          fontFamily='Poppins_600SemiBold'
+          fontSize={16}
+        >
+          {user.name}
+        </Text>
 
         <Text
           fontFamily='Poppins_300Light'
