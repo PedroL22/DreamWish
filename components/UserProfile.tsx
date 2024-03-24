@@ -9,7 +9,6 @@ export const UserProfile = () => {
 
   return (
     <View
-      width='100%'
       flexDirection='row'
       alignItems='center'
       gap='$3'

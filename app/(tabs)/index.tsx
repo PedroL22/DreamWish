@@ -1,6 +1,6 @@
 import React from 'react'
 
-import { View } from '@gluestack-ui/themed'
+import { ShareIcon, View } from '@gluestack-ui/themed'
 import { Banner, UserProfile } from '~/components'
 
 export default function TabOneScreen() {
@@ -13,7 +13,15 @@ export default function TabOneScreen() {
         px='$5'
         py='$3'
       >
-        <UserProfile />
+        <View
+          flexDirection='row'
+          alignItems='center'
+          justifyContent='space-between'
+        >
+          <UserProfile />
+
+          <ShareIcon size='lg' />
+        </View>
       </View>
     </View>
   )
