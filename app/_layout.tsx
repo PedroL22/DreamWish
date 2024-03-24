@@ -66,7 +66,7 @@ function RootLayoutNav() {
         <View style={{ paddingTop: insets.top }}>
           <StatusBar
             animated={true}
-            backgroundColor={Colors.light.secondaryColor}
+            backgroundColor={Colors.light.primaryColor}
           />
         </View>
 
