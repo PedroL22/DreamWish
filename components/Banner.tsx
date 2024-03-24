@@ -6,8 +6,8 @@ import BannerDefault from '~/assets/images/banner-default.png'
 export const Banner = () => {
   return (
     <View
-      flexDirection='row'
       width='100%'
+      flexDirection='row'
     >
       <Image
         source={BannerDefault}

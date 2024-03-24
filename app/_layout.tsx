@@ -6,8 +6,6 @@ import { useEffect } from 'react'
 import { useSafeAreaInsets } from 'react-native-safe-area-context'
 
 import {
-  Poppins_100Thin,
-  Poppins_200ExtraLight,
   Poppins_300Light,
   Poppins_400Regular,
   Poppins_500Medium,
@@ -31,8 +29,6 @@ SplashScreen.preventAutoHideAsync()
 
 export default function RootLayout() {
   const [fontsLoaded, fontsError] = useFonts({
-    Poppins_100Thin,
-    Poppins_200ExtraLight,
     Poppins_300Light,
     Poppins_400Regular,
     Poppins_500Medium,
